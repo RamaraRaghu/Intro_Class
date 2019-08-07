@@ -1,0 +1,1997 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html ng-app="" class="ie6"> <![endif]-->
+<!--[if IE 7 ]> <html ng-app="" class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html ng-app="" class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html ng-app="" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html ng-app="" ng-strict-di> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgIGVFBbGwAIVlVaBgc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+    <base href="/"/>
+	<title>Step it Up Production Music - Royalty Free from AudioBlocks</title>
+
+			<meta name="description" content="Step it Up royalty free production music and stock music. Download this audio clip and more sound effects and loops."/>
+	
+			<meta name="keywords" content="guitar,groovy,hip hop,mysterious,dark,cool,solid,quirky,catchy,gripping,flowing,edgy,action,mystery,scifi,unusual,synths,solid groove,solid beat,bass,upbeat,happy,positive,modern,beat,uplifting,fun,laid-back,lively,jumpy,electronic,bouncy,funky,drums,rap,driving beat,teen,young,urban,club,sexy,groove,teen pop,hip hop beat,laid back,samples,Hip Hop and Rap  Pop Modern"/>
+	
+			<meta name="robots" content="index, follow"/>
+	
+	
+    
+    
+    
+    
+    <meta name="wot-verification" content="2020a5c4413ae3aa06fd"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/audioblocks/images/favicons/favicon.ico"/>
+    <link rel="apple-touch-icon" href="/assets/audioblocks/images/favicons/apple-touch-icon.png"/>
+
+        <link href="https://dtyn3c8zjrx01.cloudfront.net/css/e44fa39b5af4c6b9e8a4abb23b99afea.css" rel="stylesheet" type="text/css" media="screen">
+
+    
+    
+            <script type="text/javascript">
+              var _cio = _cio || [];
+              (function() {
+                var a,b,c;a=function(f){return function(){_cio.push([f].
+                concat(Array.prototype.slice.call(arguments,0)))}};b=["load","identify",
+                "sidentify","track","page"];for(c=0;c<b.length;c++){_cio[b[c]]=a(b[c])};
+                var t = document.createElement('script'),
+                    s = document.getElementsByTagName('script')[0];
+                t.async = true;
+                t.id    = 'cio-tracker';
+                t.setAttribute('data-site-id', '3b828d185019ebdaa7b2');
+                t.src = 'https://assets.customer.io/assets/track.js';
+                s.parentNode.insertBefore(t, s);
+              })();
+            </script>
+
+        <script type="text/javascript">
+        </script>
+
+        <script type="text/javascript">
+            !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+                analytics.load("s7GubOamxNGed86CCGbGN1Wff3zHneN3");
+                analytics.page();window._sdl = window._sdl || {}; window._sdl.visitorData = window._sdl.visitorData || {"isLoggedIn":false,"visitorCookieId":"e4be160568b0e9b27cefba6050e9c00a571ba46a050aa95da0ace0e3a3cc023f","visitorCanSeeFreeTrial":false};                analytics.ready(function(){
+                    if (window._sdl && window._sdl.visitorData && _sdl.visitorData.segmentIOId) {
+                        analytics.identify(window._sdl.visitorData.segmentIOId, window._sdl.visitorData);
+                    } else {
+                        analytics.identify('e4be160568b0e9b27cefba6050e9c00a571ba46a050aa95da0ace0e3a3cc023f');
+                    }
+                });
+
+            }}();
+        </script>
+            <script type="text/javascript">
+
+                var _gaq = _gaq || [];            _gaq.push(['notSegmentTracker._setAccount', 'UA-223413-23']);
+            _gaq.push(['notSegmentTracker._trackPageview']);                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+
+            </script>
+
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WZ3BBT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WZ3BBT');</script>
+        <!-- End Google Tag Manager -->
+
+    <meta property="og:audio" content="https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/step-it-up_f1tDgLSu.mp3" />
+<meta property="og:audio:type" content="application/mp3" />
+<meta property="og:audio:title" content="Step it Up" />
+<meta property="og:image" content="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/step-it-up_f1tDgLSu.png"/>
+<meta property="fb:app_id" content="439086752892240"/>
+
+<link rel="image_src" href="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/step-it-up_f1tDgLSu.png"  />
+
+</head>
+<body class="wp-theme-1 not-logged-in  machine">
+
+            <div id="fb-root"></div>
+            <script>
+                window.fbAsyncInit = function() {
+                    FB.init({appId: '439086752892240', status: true, cookie: true,
+                        xfbml: true});
+                };
+                (function() {
+                    var e = document.createElement('script'); e.async = true;
+                    e.src = document.location.protocol +
+                        '//connect.facebook.net/en_US/all.js';
+                    document.getElementById('fb-root').appendChild(e);
+                }());
+            </script>
+
+<div class="wrapper ">
+
+        <div class="navbar-fixed-top">
+            
+<header>
+    <div class="navbar navbar-white " role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="https://dtyn3c8zjrx01.cloudfront.net/img/assets/audioblocks/images/logo.png" alt="AudioBlocks.com">
+                </a>
+            </div>
+
+            
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle browse-link" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">Browse</a>
+                        <ul class="dropdown-menu browse">
+                            <li>
+                                <div class="dropdown-style-switcher">
+                                    <form class="form-light">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center" data-tabs="tabs">
+                                                <div class="col-xs-4">
+                                                    <a data-toggle="tab" href="#nav-browse-music" class="browse-selector highlight"><i class="glyphicon glyphicon-music"></i> Music</a>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <a data-toggle="tab" href="#nav-browse-sfx" class="browse-selector"><i class="glyphicon glyphicon-flash"></i> Sound Effects</a>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <a data-toggle="tab" href="#nav-browse-loops" class="browse-selector"><i class="glyphicon glyphicon-repeat"></i> Loops</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row slice bg-5 margin-t-15 padding-y-20">
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="nav-browse-music">
+                                                    <div class="col-xs-12">
+                                                        <div class="col-xs-3">
+                                                            <strong class="underline">Moods</strong>
+                                                            <ul class="list-unstyled">
+                                                                                                                                    <li><a href="/search/?srch-type=music&moods=1">Aggressive</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&moods=4">Epic/Inspiring</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&moods=7">Happy/Upbeat</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&moods=3">Playful/Silly</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&moods=6">Relaxing</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&moods=5">Sad</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&moods=8">Sentimental</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&moods=2">Suspenseful</a></li>
+                                                                                                                            </ul>
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <strong class="underline">Genres</strong>
+                                                            <ul class="list-unstyled">
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=9">Alternative Rock</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=33">Ambience</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=36">Blues</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=38">Bumpers & Stingers</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=11">Cinematic</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=12">Classic Rock</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=32">Classical</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=22">Corporate</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=13">Country</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=23">Dramatic</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=10">Easy listening</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=37">Electronic</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=35">Funk</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=24">Guitar</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=14">Hard Rock and Heavy Metal</a></li>
+                                                                                                                            </ul>
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <br>
+                                                            <ul class="list-unstyled">
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=20">Hip Hop</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=25">Holiday</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=26">Horror</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=27">Instrumental</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=28">Island</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=29">Jazz</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=30">Percussion</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=31">Playful and Comedic</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=15">Pop</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=16">Punk Rock</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=34">Religious</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=17">Romantic</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=18">Techno</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=19">Uplifting and Epic</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&genres=21">World</a></li>
+                                                                                                                            </ul>
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <strong class="underline">Instruments</strong>
+                                                            <ul class="list-unstyled">
+                                                                                                                                    <li><a href="/search/?srch-type=music&instruments=41">Brass</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&instruments=40">Guitar</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&instruments=39">Orchestra</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&instruments=42">Percussion</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&instruments=45">Piano</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&instruments=43">Vocals</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=music&instruments=44">Woodwind</a></li>
+                                                                                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="nav-browse-sfx">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-3">
+                                                            <ul class="list-unstyled">
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=46">Alarms</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=47">Ambience</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=48">Animals</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=92">Applause</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=105">Balloon</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=49">Bangs</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=50">Bathroom</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=51">Bells</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=52">Birds</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=53">Boats</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=54">Breaking</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=55">Buzzers</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=57">Cartoon</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=58">Casino</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=91">City</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=59">Clicks</a></li>
+                                                                                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <ul class="list-unstyled">
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=89">Clocks</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=96">Computer</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=60">Crowds</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=61">Dogs</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=62">Doors</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=63">Effects</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=106">Electronics</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=102">Emergency</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=98">Explosion</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=64">Falling</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=65">Festive</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=100">Fight</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=66">Fire</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=67">Flight</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=107">Foley</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=68">Footsteps</a></li>
+                                                                                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <ul class="list-unstyled">
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=69">Friction</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=95">Furniture</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=108">Glass</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=94">Horror</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=71">House</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=103">Impact</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=72">Industrial</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=90">Insects</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=73">Kitchen</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=99">Magic</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=74">Misc</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=75">Money</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=93">Nature</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=76">Office</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=77">Paper</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=78">People</a></li>
+                                                                                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <ul class="list-unstyled">
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=79">Phones</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=80">Ripping</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=81">Scifi</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=104">Sports</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=82">Squeaks</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=83">Tools & Machines</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=70">Toys & Games</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=84">Trains</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=56">Vehicle & Traffic</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=85">Water</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=86">Weapons</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=88">Weather</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=87">Whistles</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=97">Whoosh</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=sfx&categories=101">Wood</a></li>
+                                                                                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="nav-browse-loops">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-3">
+                                                            <strong class="underline">Instruments</strong>
+                                                            <ul class="list-unstyled">
+                                                                                                                                    <li><a href="/search/?srch-type=loops&instruments=111">Brass</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=loops&instruments=110">Guitar</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=loops&instruments=109">Orchestra</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=loops&instruments=112">Percussion</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=loops&instruments=115">Piano</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=loops&instruments=113">Vocals</a></li>
+                                                                                                                                    <li><a href="/search/?srch-type=loops&instruments=114">Woodwind</a></li>
+                                                                                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                                            <li>
+                            <a href="/page/about/">About</a>
+                        </li>
+                                                            <li>
+                        <a href="http://support.audioblocks.com/" target="_blank">Support</a>
+                    </li>
+                                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle toggle-login" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">Login</a>
+                            <ul class="dropdown-menu login">
+                                <li class="login-popup">
+                                    <div class="row login-form-wrapper">
+                                        <div class="col-md-12">
+                                            <div class="row">
+    <div class="col-md-12">
+
+        <form action="/api/login/" method="POST"
+              class="form-horizontal login-form validate"
+              id="login-form"
+                        >
+
+            <div class="row">
+                <div class="col-md-12 form-inputs">
+                    
+<div class="form-group">
+        <div class="col-sm-3">
+                <label class=" " for="login-form-email">Email                    </label>
+            </div>
+    <div class="col-sm-9">
+                <input type="text" name="email" id="login-form-email"
+               class="form-control email"
+                            placeholder="Please input your email"
+                        >
+                    </div>
+</div>
+<div class="form-group">
+        <div class="col-sm-3">
+                <label class=" " for="login-form-password">Password                    </label>
+            </div>
+    <div class="col-sm-9">
+                <input type="password" name="password" id="login-form-password"
+               class="form-control password"
+                            placeholder="Please input your password"
+                        >
+                    </div>
+</div><input type="hidden" id="login-form-redirect_url" name="redirect_url" value="/stock-audio/step-it-up-93160.html" />
+                    
+                                            <div class="form-group">
+        <div
+        class="col-sm-9 col-sm-offset-3 " >
+        <button id="login-form-submit"  type="submit" class="btn pull-left btn-primary pull-left">Login</button>    </div>
+</div>
+
+                        
+                                    </div>
+
+                
+            </div>
+
+            
+
+        </form>
+    </div>
+</div>
+                                            <span id="forgot-password-login-message" >
+		                                        Forgot Password?
+		                                        <a href="/login/">
+                                                    <b>Click here</b>
+                                                </a>
+	                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="row no-cookie-warning hidden">
+                                        <div class="col-md-12">
+                                            <span class="strong">Warning: cookies are disabled on your web browser.  You must enable them to log in.</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                                                                <li class="dropdown signup-button">
+                            <a href="/join/" class="highlight"><i class=""></i>Sign Up</a>
+                        </li>
+                                                                            </ul>
+
+                <div class="col-lg-5 col-md-4 col-sm-12" id="srch-wrapper">
+                    <form class="navbar-form navbar-left navbar-search" role="search" action="/search/">
+                        <div class="input-group ui-widget">
+                            <input type="text" class="form-control autocomplete-audio" placeholder="Search" value="" name="srch-term" id="srch-term">
+                            <div class="input-group-btn">
+                                <select class="selectpicker show-menu-arrow" name="srch-type" id="srch-type" data-style="btn-five" data-width="110px">
+                                    <option value="all" data-icon="ggit glyphicon-headphones">All</option>
+                                    <option value="music" data-icon="glyphicon-music">Music</option>
+                                    <option value="sfx" data-icon="glyphicon-flash">SFX</option>
+                                    <option value="loops" data-icon="glyphicon-repeat">Loops</option>
+                                </select>
+                            </div>
+                            <div class="input-group-btn">
+                                <button class="btn btn-two" type="submit" id="srch-btn"><span class="glyphicon glyphicon-search"></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div><!--/.nav-collapse -->
+
+                    </div>
+    </div>
+</header>
+
+        </div>
+    
+    
+            <div class="pg-opt pin">
+            <div class="container first">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb notranslate">
+            <li>
+                             <a href="/">
+                            Home                            </a>
+                    </li>
+            <li>
+                             <a href="/search/?srch-type=music">
+                            Music                            </a>
+                    </li>
+            <li>
+                            Step it Up Production Music                    </li>
+    </ol>
+                    </div>
+                    <div class="col-md-3 pull-right hidden-xs">
+                        <div class="row padding-top-20 pull-right">
+    <div class="col-md-2">
+        <div class="g-like"><g:plusone size="medium" annotation="none" width="80" href="https://plus.google.com/118033419110315291896/about"></g:plusone></div>
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+    </div>
+    <div class="col-md-2">
+        <div class="t-like"><a href="https://twitter.com/audio_blocks" class="twitter-follow-button" data-url="http://www.audioblocks.com" data-via="audio_blocks" data-show-count="false" data-show-screen-name="false"></a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+    </div>
+    <div class="col-md-8" style="text-align: right;">
+        <div class="fb-like" data-href="https://www.facebook.com/AudioBlocks" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-action="recommend" data-font="arial"></div>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        <section class="slice bg-3" style="padding-top: 5px;">
+    <div class="w-section inverse">
+        <div class="container pt-10">
+            <div class="row"><div class="col-md-8"><div id="message-placeholder"></div></div></div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1 style="font-size:18px;margin:10px 0;">Step it Up Music</h1> <!-- Render title here invisible so that download buttons align with player -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 details-player">
+                            
+
+                <div id="preview-player"></div>
+                <div id="preview-player-controls" class="jp-audio ">
+                    <div class="jp-type-single">
+                        <div class="jp-gui jp-interface">
+                            <div class="jp-controls">
+
+                                
+                                <a class="jp-play btn btn-two" href="javascript:void(0);"><i class="glyphicon glyphicon-play"></i></a>
+                                <a class="jp-pause btn btn-two" href="javascript:void(0);"><i class="glyphicon glyphicon-pause"></i></a>
+
+                            </div>
+                            <div class="jp-progress">
+                                <div class="jp-seek-bar">
+                                    <div class="jp-play-bar"></div>
+                                    <div class="jp-title hidden-xs"></div>
+                                    <div class="jp-time-elements">
+                                        <span class="jp-current-time"></span> /
+                                        <span class="jp-duration"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jp-volume-container hidden-xs">
+                                <a class="jp-mute" href="javascript:void(0);"><i class="glyphicon glyphicon-volume-off"></i></a>
+                                <div class="jp-volume-bar">
+                                    <div class="jp-volume-bar-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jp-no-solution">
+                            <span>Update Required</span>
+                            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                    </div>
+                </div>
+
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;">
+                        <div class="col-xs-5">
+                            <a id="add-to-bin-wrapper" data-id="93160"><i class="glyphicon glyphicon-plus"></i> Add to Album</a>
+                        </div>
+                        <div class="col-xs-3 col-xs-offset-2 hidden-xs">
+                            <div class="rating pull-right">
+                                
+                                                                            <span class="empty" data-rating="5">&#9734</span> <!-- Show empty stars when rating < star # -->
+                                    
+                                
+                                                                            <span class="empty" data-rating="4">&#9734</span> <!-- Show empty stars when rating < star # -->
+                                    
+                                
+                                                                            <span class="empty" data-rating="3">&#9734</span> <!-- Show empty stars when rating < star # -->
+                                    
+                                
+                                                                            <span class="empty" data-rating="2">&#9734</span> <!-- Show empty stars when rating < star # -->
+                                    
+                                
+                                                                            <span class="empty" data-rating="1">&#9734</span> <!-- Show empty stars when rating < star # -->
+                                    
+                                                            </div>
+                            <div class="pull-right margin-r-20"><strong>Rating:</strong></div>
+                        </div>
+                    </div>
+
+                                                                        <div class="row moods-area">
+                                <div class="col-xs-12">
+                                    <h5>Moods</h5>
+                                                                            <a href="/search/?srch-type=music&moods=1" class="btn btn-five btn-xs item-tag">Aggressive</a>
+                                                                            <a href="/search/?srch-type=music&moods=4" class="btn btn-five btn-xs item-tag">Epic/Inspiring</a>
+                                                                            <a href="/search/?srch-type=music&moods=7" class="btn btn-five btn-xs item-tag">Happy/Upbeat</a>
+                                                                            <a href="/search/?srch-type=music&moods=5" class="btn btn-five btn-xs item-tag">Sad</a>
+                                                                            <a href="/search/?srch-type=music&moods=2" class="btn btn-five btn-xs item-tag">Suspenseful</a>
+                                                                    </div>
+                            </div>
+                                                                            <div class="row genres-area">
+                                <div class="col-xs-12">
+                                    <h5>Genres</h5>
+                                                                            <a href="/search/?srch-type=music&genres=37" class="btn btn-five btn-xs item-tag">Electronic</a>
+                                                                            <a href="/search/?srch-type=music&genres=35" class="btn btn-five btn-xs item-tag">Funk</a>
+                                                                            <a href="/search/?srch-type=music&genres=24" class="btn btn-five btn-xs item-tag">Guitar</a>
+                                                                            <a href="/search/?srch-type=music&genres=20" class="btn btn-five btn-xs item-tag">Hip Hop</a>
+                                                                            <a href="/search/?srch-type=music&genres=18" class="btn btn-five btn-xs item-tag">Techno</a>
+                                                                            <a href="/search/?srch-type=music&genres=19" class="btn btn-five btn-xs item-tag">Uplifting and Epic</a>
+                                                                    </div>
+                            </div>
+                                                                            <div class="row instruments-area">
+                                <div class="col-xs-12">
+                                    <h5>Instruments</h5>
+                                                                            <a href="/search/?srch-type=music&instruments=40" class="btn btn-five btn-xs item-tag">Guitar</a>
+                                                                            <a href="/search/?srch-type=music&instruments=39" class="btn btn-five btn-xs item-tag">Orchestra</a>
+                                                                    </div>
+                            </div>
+                                            
+                                            <div class="row keywords-area">
+                            <div class="col-xs-12">
+                                <h5>Keywords</h5>
+                                                                    <a href="/search/?srch-term=action" class="btn btn-five btn-xs item-tag">action</a>
+                                                                    <a href="/search/?srch-term=bass" class="btn btn-five btn-xs item-tag">bass</a>
+                                                                    <a href="/search/?srch-term=beat" class="btn btn-five btn-xs item-tag">beat</a>
+                                                                    <a href="/search/?srch-term=bouncy" class="btn btn-five btn-xs item-tag">bouncy</a>
+                                                                    <a href="/search/?srch-term=catchy" class="btn btn-five btn-xs item-tag">catchy</a>
+                                                                    <a href="/search/?srch-term=club" class="btn btn-five btn-xs item-tag">club</a>
+                                                                    <a href="/search/?srch-term=cool" class="btn btn-five btn-xs item-tag">cool</a>
+                                                                    <a href="/search/?srch-term=dark" class="btn btn-five btn-xs item-tag">dark</a>
+                                                                    <a href="/search/?srch-term=driving+beat" class="btn btn-five btn-xs item-tag">driving beat</a>
+                                                                    <a href="/search/?srch-term=drums" class="btn btn-five btn-xs item-tag">drums</a>
+                                                                    <a href="/search/?srch-term=edgy" class="btn btn-five btn-xs item-tag">edgy</a>
+                                                                    <a href="/search/?srch-term=electronic" class="btn btn-five btn-xs item-tag">electronic</a>
+                                                                    <a href="/search/?srch-term=flowing" class="btn btn-five btn-xs item-tag">flowing</a>
+                                                                    <a href="/search/?srch-term=fun" class="btn btn-five btn-xs item-tag">fun</a>
+                                                                    <a href="/search/?srch-term=funky" class="btn btn-five btn-xs item-tag">funky</a>
+                                                                    <a href="/search/?srch-term=gripping" class="btn btn-five btn-xs item-tag">gripping</a>
+                                                                    <a href="/search/?srch-term=groovy" class="btn btn-five btn-xs item-tag">groovy</a>
+                                                                    <a href="/search/?srch-term=guitar" class="btn btn-five btn-xs item-tag">guitar</a>
+                                                                    <a href="/search/?srch-term=happy" class="btn btn-five btn-xs item-tag">happy</a>
+                                                                    <a href="/search/?srch-term=hip+hop" class="btn btn-five btn-xs item-tag">hip hop</a>
+                                                                    <a href="/search/?srch-term=jumpy" class="btn btn-five btn-xs item-tag">jumpy</a>
+                                                                    <a href="/search/?srch-term=laid+back" class="btn btn-five btn-xs item-tag">laid-back</a>
+                                                                    <a href="/search/?srch-term=lively" class="btn btn-five btn-xs item-tag">lively</a>
+                                                                    <a href="/search/?srch-term=modern" class="btn btn-five btn-xs item-tag">modern</a>
+                                                                    <a href="/search/?srch-term=mysterious" class="btn btn-five btn-xs item-tag">mysterious</a>
+                                                                    <a href="/search/?srch-term=mystery" class="btn btn-five btn-xs item-tag">mystery</a>
+                                                                    <a href="/search/?srch-term=positive" class="btn btn-five btn-xs item-tag">positive</a>
+                                                                    <a href="/search/?srch-term=quirky" class="btn btn-five btn-xs item-tag">quirky</a>
+                                                                    <a href="/search/?srch-term=rap" class="btn btn-five btn-xs item-tag">rap</a>
+                                                                    <a href="/search/?srch-term=scifi" class="btn btn-five btn-xs item-tag">scifi</a>
+                                                                    <a href="/search/?srch-term=solid" class="btn btn-five btn-xs item-tag">solid</a>
+                                                                    <a href="/search/?srch-term=solid+beat" class="btn btn-five btn-xs item-tag">solid beat</a>
+                                                                    <a href="/search/?srch-term=solid+groove" class="btn btn-five btn-xs item-tag">solid groove</a>
+                                                                    <a href="/search/?srch-term=synths" class="btn btn-five btn-xs item-tag">synths</a>
+                                                                    <a href="/search/?srch-term=teen" class="btn btn-five btn-xs item-tag">teen</a>
+                                                                    <a href="/search/?srch-term=unusual" class="btn btn-five btn-xs item-tag">unusual</a>
+                                                                    <a href="/search/?srch-term=upbeat" class="btn btn-five btn-xs item-tag">upbeat</a>
+                                                                    <a href="/search/?srch-term=uplifting" class="btn btn-five btn-xs item-tag">uplifting</a>
+                                                                    <a href="/search/?srch-term=urban" class="btn btn-five btn-xs item-tag">urban</a>
+                                                                    <a href="/search/?srch-term=young" class="btn btn-five btn-xs item-tag">young</a>
+                                                            </div>
+                        </div>
+                    
+
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4><i class="glyphicon glyphicon-download-alt"></i> Download now</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                                                    <div class="col-xs-6">
+                                <a data-download-url="/stock-audio/download-ajax/93160/MP3/" class="btn btn-two col-xs-12 download-item" ><strong>MP3</strong></a>
+                                                                <div>
+                                    320 kbps; stereo <br/> MP3 (.mp3) <br/>
+                                    5.7 MB                                </div>
+                            </div>
+                                                                            <div class="col-xs-6">
+                                <a data-download-url="/stock-audio/download-ajax/93160/WAV/" class="btn btn-two col-xs-12 download-item" ><strong>WAV</strong></a>
+                                                                <div>
+                                    44 public 100 Hz; 24 bit; stereo <br/> WAV (.wav) <br/>
+                                    37.9 MB                                </div>
+                            </div>
+                                            </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4><i class="glyphicon glyphicon-list"></i> Details</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="list-unstyled attributes-area">
+                                <li><strong>Filename:</strong> step-it-up_f1tDgLSu.mp3</li>
+                                <li><strong>Type:</strong> Music</li>
+                                <li><strong>BPM:</strong> 96</li>
+                                <li><strong>Duration:</strong> 2:30</li>
+                            </ul>
+                        </div>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slice bg-5" >
+    <div class="w-section inverse">
+        <div class="container pt-10">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Similar sounds</h4>
+                    
+
+<div id="similar-clips" class="stock-item-group-wrapper">
+
+    
+                    <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="0"
+             data-duration="138"
+             data-stock-id="90998"
+             data-details-url="/stock-audio/cup-of-life-90998.html"
+             data-hover-url="/stock-audio/hover/cup-of-life-90998/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="90998">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Cup Of Life"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/cup-of-life_M1oPVHHO.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/cup-of-life-90998.html">
+                                <small class="item-title">
+                                    Cup Of Life                                    (2:18                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="1"
+             data-duration="50"
+             data-stock-id="76266"
+             data-details-url="/stock-audio/lady-be-mine-76266.html"
+             data-hover-url="/stock-audio/hover/lady-be-mine-76266/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="76266">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Lady Be Mine"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/lady-be-mine_fJSRlZrO.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/lady-be-mine-76266.html">
+                                <small class="item-title">
+                                    Lady Be Mine                                    (0:50                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="2"
+             data-duration="36"
+             data-stock-id="77953"
+             data-details-url="/stock-audio/not-for-the-last-time-77953.html"
+             data-hover-url="/stock-audio/hover/not-for-the-last-time-77953/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="77953">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Not For The Last Time"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/not-for-the-last-time_fkvDYbB_.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/not-for-the-last-time-77953.html">
+                                <small class="item-title">
+                                    Not For The Last Time                                    (0:36                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="3"
+             data-duration="83"
+             data-stock-id="97489"
+             data-details-url="/stock-audio/dingus-solo-alt-97489.html"
+             data-hover-url="/stock-audio/hover/dingus-solo-alt-97489/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="97489">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Dingus Solo Alt"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/bnm-0715-dingus-solo-alt.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/dingus-solo-alt-97489.html">
+                                <small class="item-title">
+                                    Dingus Solo Alt                                    (1:23                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="4"
+             data-duration="205"
+             data-stock-id="16942"
+             data-details-url="/stock-audio/kids-commercial-upbeat-happy-theme-Kids_Commerical_Upbeat_Happy_Theme.html"
+             data-hover-url="/stock-audio/hover/kids-commercial-upbeat-happy-theme-Kids_Commerical_Upbeat_Happy_Theme/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="16942">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Kids Commercial Upbeat Happy Theme"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/kids-commercial-upbeat-happy-theme_f1qWjENu.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/kids-commercial-upbeat-happy-theme-Kids_Commerical_Upbeat_Happy_Theme.html">
+                                <small class="item-title">
+                                    Kids Commercial Upbeat Ha...                                    (3:25                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="5"
+             data-duration="63"
+             data-stock-id="82193"
+             data-details-url="/stock-audio/the-day-i-lost-you-82193.html"
+             data-hover-url="/stock-audio/hover/the-day-i-lost-you-82193/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="82193">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="The Day I Lost You"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/the-day-i-lost-you_zJwRJXr_.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/the-day-i-lost-you-82193.html">
+                                <small class="item-title">
+                                    The Day I Lost You                                    (1:03                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="6"
+             data-duration="6"
+             data-stock-id="97573"
+             data-details-url="/stock-audio/fly-by-stinger-97573.html"
+             data-hover-url="/stock-audio/hover/fly-by-stinger-97573/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="97573">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Fly By Stinger"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/bnm-0715-fly-by-stinger.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/fly-by-stinger-97573.html">
+                                <small class="item-title">
+                                    Fly By Stinger                                    (0:06                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="7"
+             data-duration="33"
+             data-stock-id="73622"
+             data-details-url="/stock-audio/falling-water-73622.html"
+             data-hover-url="/stock-audio/hover/falling-water-73622/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="73622">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Falling Water"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/falling-water_GkS0MerO.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/falling-water-73622.html">
+                                <small class="item-title">
+                                    Falling Water                                    (0:33                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="8"
+             data-duration="222"
+             data-stock-id="77501"
+             data-details-url="/stock-audio/morrisons-jig-77501.html"
+             data-hover-url="/stock-audio/hover/morrisons-jig-77501/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="77501">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Morrisons Jig"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/morrisons-jig_MkXBw-Bd.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/morrisons-jig-77501.html">
+                                <small class="item-title">
+                                    Morrisons Jig                                    (3:42                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="9"
+             data-duration="67"
+             data-stock-id="24241"
+             data-details-url="/stock-audio/interface-rmx-60sd.html"
+             data-hover-url="/stock-audio/hover/interface-rmx-60sd/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="24241">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Interface Rmx 60sd"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/interface-rmx-60sd_zJJmmIEu.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/interface-rmx-60sd.html">
+                                <small class="item-title">
+                                    Interface Rmx 60sd                                    (1:07                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="10"
+             data-duration="81"
+             data-stock-id="16376"
+             data-details-url="/stock-audio/bright-bright-sunshine-full.html"
+             data-hover-url="/stock-audio/hover/bright-bright-sunshine-full/"
+            >
+
+
+            <div class="w-box thumbnail">
+                                    <div class="ribbon">
+                        <p>
+                            Hot                        </p>
+                    </div>
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="16376">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Bright Bright Sunshine Full"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/bright-bright-sunshine-full_zJ6fYNV_.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/bright-bright-sunshine-full.html">
+                                <small class="item-title">
+                                    Bright Bright Sunshine Fu...                                    (1:21                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="11"
+             data-duration="28"
+             data-stock-id="97383"
+             data-details-url="/stock-audio/west-coast-ride-looping-97383.html"
+             data-hover-url="/stock-audio/hover/west-coast-ride-looping-97383/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="97383">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="West coast ride looping"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/jdi-0414-west_coast_ride-looping.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/west-coast-ride-looping-97383.html">
+                                <small class="item-title">
+                                    West coast ride looping                                    (0:28                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="12"
+             data-duration="245"
+             data-stock-id="16749"
+             data-details-url="/stock-audio/funky-70s-dance-floor-groove.html"
+             data-hover-url="/stock-audio/hover/funky-70s-dance-floor-groove/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="16749">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Funky 70s Dance Floor Groove"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/funky-70s-dance-floor-groove_fkB8cVN_.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/funky-70s-dance-floor-groove.html">
+                                <small class="item-title">
+                                    Funky 70s Dance Floor Gro...                                    (4:05                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="13"
+             data-duration="32"
+             data-stock-id="98625"
+             data-details-url="/stock-audio/drum-and-bass-groove-98625.html"
+             data-hover-url="/stock-audio/hover/drum-and-bass-groove-98625/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="98625">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Drum And Bass Groove"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/bcc-031814-drum-and-bass-groove-396.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/drum-and-bass-groove-98625.html">
+                                <small class="item-title">
+                                    Drum And Bass Groove                                    (0:32                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="14"
+             data-duration="63"
+             data-stock-id="75127"
+             data-details-url="/stock-audio/hidden-agenda-75127.html"
+             data-hover-url="/stock-audio/hover/hidden-agenda-75127/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="75127">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Hidden Agenda"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/hidden-agenda_f1aF5lrO.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/hidden-agenda-75127.html">
+                                <small class="item-title">
+                                    Hidden Agenda                                    (1:03                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 stock-item"
+             data-index="15"
+             data-duration="9"
+             data-stock-id="72722"
+             data-details-url="/stock-audio/deeply-in-love---alt-mix-72722.html"
+             data-hover-url="/stock-audio/hover/deeply-in-love---alt-mix-72722/"
+            >
+
+
+            <div class="w-box thumbnail">
+                
+                
+                
+                <div class="thumbnail-actions">
+                    
+
+                    
+                        <a class="btn btn-five download-item download-item-mp3"
+                           data-download-url="#">
+                            MP3                        </a>
+
+                        <a class="btn btn-five download-item download-item-wav"
+                           data-download-url="#">
+                            WAV                        </a>
+
+                    
+                    
+                        <a class="btn btn-five join-now"
+                           data-id="72722">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+
+                    
+                    
+                                    </div>
+                <!-- .options div -->
+            
+                <div class="thumbnail-img-wrapper">
+                                        <img alt="Deeply In Love - Alt Mix"
+                         src="https://d1490khl9dq1ow.cloudfront.net/music/thumbs/deeply-in-love-alt-mix_Gk3SRJr_.png"
+                         class="img-responsive progress-background thumbnail-img shrinking">
+                </div>
+
+                                    <div class="row item-subtext">
+                        <div class="col-xs-12">
+                            <a href="/stock-audio/deeply-in-love---alt-mix-72722.html">
+                                <small class="item-title">
+                                    Deeply In Love - Alt Mix                                    (0:09                                    )
+                                    <span class="view-details-text">&mdash; Details</span>
+                                </small>
+                            </a>
+                                                            <small class="add-to-album-text hidden">Add to album</small>                            <small class="download-mp3-text hidden">Download MP3 file</small>
+                            <small class="download-wav-text hidden">Download WAV file</small>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+                
+    
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script type="text/javascript" src="//www.dropbox.com/static/api/1/dropins.js" id="dropboxjs" data-app-key="98oqewfoqf89v6z"></script>
+
+
+    <div class="navbar navbar-default navbar-fixed-bottom player-footer"  style="display:none;" >
+        <div class="container">
+            <div class="col-xs-offset-2">
+                <h5>Now playing</h5>
+
+                <div id="similar-clips-player"></div>
+                <div id="similar-clips-player-controls" class="jp-audio playlist-mode">
+                    <div class="jp-type-single">
+                        <div class="jp-gui jp-interface">
+                            <div class="jp-controls">
+
+                                                                    <a class="jp-previous btn btn-two" href="javascript:void(0);"><i class="glyphicon glyphicon-step-backward"></i></a>
+                                    <a class="jp-next btn btn-two" href="javascript:void(0);"><i class="glyphicon glyphicon-step-forward"></i></a>
+                                
+                                <a class="jp-play btn btn-two" href="javascript:void(0);"><i class="glyphicon glyphicon-play"></i></a>
+                                <a class="jp-pause btn btn-two" href="javascript:void(0);"><i class="glyphicon glyphicon-pause"></i></a>
+
+                            </div>
+                            <div class="jp-progress">
+                                <div class="jp-seek-bar">
+                                    <div class="jp-play-bar"></div>
+                                    <div class="jp-title hidden-xs"></div>
+                                    <div class="jp-time-elements">
+                                        <span class="jp-current-time"></span> /
+                                        <span class="jp-duration"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jp-volume-container hidden-xs">
+                                <a class="jp-mute" href="javascript:void(0);"><i class="glyphicon glyphicon-volume-off"></i></a>
+                                <div class="jp-volume-bar">
+                                    <div class="jp-volume-bar-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jp-no-solution">
+                            <span>Update Required</span>
+                            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade " id="join-modal" tabindex="-1" role="dialog"
+     aria-labelledby="join" aria-hidden="true">
+    <div class="modal-dialog custom-width">
+        <div class="modal-content">
+
+                            <div class="modal-heading modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    
+                    <h4 class="modal-title" id="myModalLabel">You are not logged in to access this feature.</h4>
+                </div>
+            
+            <div class="modal-body">
+
+    <h3>1 Year of Unlimited Downloads for Only $99<br />Our Best Offer - Save 90% Off the Monthly Price</h3>
+    <p>Enjoy unlimited downloads from our library of over 100,000 royalty-free music tracks, loops, and sounds!</p>
+
+    <div class="row">
+    <div class="col-md-12">
+
+        
+        <div class="row margin-t-15">
+            <div class="col-md-12 signup-form-area">
+                <div class="row">
+    <div class="col-md-12">
+
+        <form action="/join/activate-process/" method="POST"
+              class="form-horizontal annual validate"
+              id="join"
+                        >
+
+            <div class="row">
+                <div class="col-md-12 form-inputs">
+                    
+<div class="form-group">
+        <div class="col-sm-2">
+                <label class=" " for="join-fname">First Name                    </label>
+            </div>
+    <div class="col-sm-10">
+                <input type="text" name="fname" id="join-fname"
+               class="form-control fname"
+                            placeholder="Please input your first name"
+                        >
+                    </div>
+</div>
+<div class="form-group">
+        <div class="col-sm-2">
+                <label class=" " for="join-lname">Last Name                    </label>
+            </div>
+    <div class="col-sm-10">
+                <input type="text" name="lname" id="join-lname"
+               class="form-control lname"
+                            placeholder="Please input your last name"
+                        >
+                    </div>
+</div>
+<div class="form-group">
+        <div class="col-sm-2">
+                <label class=" " for="join-email">Email                    </label>
+            </div>
+    <div class="col-sm-10">
+                <input type="text" name="email" id="join-email"
+               class="form-control email"
+                            placeholder="Please input your email"
+                            remote="/join/checkemail/"
+                        >
+                    </div>
+</div>
+<div class="form-group">
+        <div class="col-sm-2">
+                <label class=" " for="join-password">Password                    </label>
+            </div>
+    <div class="col-sm-10">
+                <input type="password" name="password" id="join-password"
+               class="form-control password"
+                            placeholder="Please input your password"
+                        >
+                    </div>
+</div>
+<div class="form-group">
+        <div class="col-sm-2">
+                <label class=" " for="join-confirm_password">Confirm password                    </label>
+            </div>
+    <div class="col-sm-10">
+                <input type="password" name="confirm_password" id="join-confirm_password"
+               class="form-control confirm_password"
+                            placeholder="Please confirm your password"
+                            equalTo="#join-password"
+                        >
+                    </div>
+</div><input type="hidden" id="join-plan_unique_id" name="plan_unique_id" value="fee27cf7f94943868b31de19240aead6" /><input type="hidden" id="join-promo_code" name="promo_code" value="" /><input type="hidden" id="join-sf" name="sf" value="1" /><div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox-container">
+                <div>
+                    <label for="join-agreement-checkbox" class="checkbox">
+                        <input type="checkbox" name="agreement-checkbox" id="join-agreement-checkbox"
+                               class="required"
+                               value="1"
+                            >
+                        I agree to <a href=/documents/AudioBlocks/termsofservice_201404.html target="_blank">terms of use</a> and <a href=/documents/AudioBlocks/RoyaltyFreeLicenseAgreementApril2014.pdf target="_blank">licensing agreement</a>                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                                            <div class="form-group">
+        <div
+        class="col-sm-10 col-sm-offset-2 " >
+        <button id="join-submit"  type="submit" class="btn pull-left btn-primary pull-left">Start Downloading Now &raquo;</button>    </div>
+</div>
+
+                        
+                                    </div>
+
+                
+            </div>
+
+            
+
+        </form>
+    </div>
+</div>
+	            <img class="mcafree-small-icon" src="https://dtyn3c8zjrx01.cloudfront.net/img/assets/common/images/mcafee-small-icon.png" alt="Mcafee Secured" />
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <p><a href="/login/">Already have an account, Login now.</a></p>
+
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="row">
+
+            <div class="col-md-2 col-offset-1">
+                <div class="col">
+                    <h4>Browse Sounds</h4>
+                    <ul>
+                       <li><a href="/search/?srch-type=music">Royalty Free Music Tracks</a></li>
+                       <li><a href="/search/?srch-type=sfx">Royalty Free Sound Effects</li>
+                       <li><a href="/search/?srch-type=loops">Royalty Free Loops</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="col">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="http://www.audioblocks.com/page/about/">About AudioBlocks</a></li>
+                        <li><a href="http://support.audioblocks.com/" target="_blank">Support</a></li>
+                        <li><a href="http://support.audioblocks.com/" target="_blank">Frequently Asked Questions</a></li>
+                        <li><a href="http://www.videoblocks.com" target="_blank">VideoBlocks.com</a></li>
+                        <li><a href="http://www.graphicstock.com" target="_blank">GraphicStock.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="col col-social-icons">
+                    <h4>Follow us</h4>
+                    <a href="https://www.facebook.com/AudioBlocks" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://plus.google.com/118033419110315291896/about" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    <a href="https://twitter.com/audio_blocks" target="_blank"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="col">
+                    <h4>Featured</h4>
+                    <div class="row">
+                        <div class="col-md-12"><img src="https://dtyn3c8zjrx01.cloudfront.net/img/assets/common/images/inc500.png" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"><img src="https://dtyn3c8zjrx01.cloudfront.net/img/assets/common/images/techcrunch.png" /></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="col">
+                    <h4>Our Guarantee</h4>
+                    <div class="row">
+                        <div class="col-md-7"><img src="https://dtyn3c8zjrx01.cloudfront.net/img/assets/common/images/ico-badge02.jpg"></div>
+                        <div class="col-md-5">Secure Downloads</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <hr />
+
+        
+        <div class="row">
+            <div class="col-lg-9 copyright">
+                2015 &copy; AudioBlocks. All rights reserved.
+                <a href="/documents/AudioBlocks/termsofservice_201404.html">Terms of Service</a> |
+                <a href="/documents/AudioBlocks/privacy.html" target="_blank">Privacy policy</a> |
+                <a href="/documents/AudioBlocks/RoyaltyFreeLicenseAgreementApril2014.pdf" target="_blank">Royalty Free License Agreement</a>
+            </div>
+            <div class="col-lg-3 footer-logo">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="loading-overlay"></div>
+        <img src="https://dtyn3c8zjrx01.cloudfront.net/img/assets/audioblocks/images/loader.gif" alt="Processing" class="loader" width="80" height="80" />
+    </div>
+
+</footer>
+
+    
+
+</div>
+<!-- end wrapper -->
+
+
+        <script type="text/javascript" src="https://dtyn3c8zjrx01.cloudfront.net/js/552546447e203169c00ee88cfce1dc93.js"></script>
+    
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+                        (function ($) {
+                var _Template_args = {};
+                var _Template = new Template(_Template_args);
+            }(jQuery));
+                        (function ($) {
+                var _AudioSiteMainNavWidgetView_args = {"loginToggleClass":"toggle-login","loginPopupClass":"login-popup","loginFormId":"login-form","SUBMIT_START_EVENT":"submit-start","loginFormWrapperClass":"login-form-wrapper","cookiesDisabledWarningClass":"no-cookie-warning","highlightClass":"highlight","browseLinkClass":"browse-link","memberDashboardLinkClass":"member-dashboard-link","browseUrl":"/search/","memberDashboardUrl":"/member/dashboard/"};
+                var _AudioSiteMainNavWidgetView = new AudioSiteMainNavWidgetView(_AudioSiteMainNavWidgetView_args);
+            }(jQuery));
+                        (function ($) {
+                var _SearchTypeAhead_args = {"typeAheadUrl":"/api/typeahead/","searchFormClass":"navbar-search","searchFieldID":"srch-term"};
+                var _SearchTypeAhead = new SearchTypeAhead(_SearchTypeAhead_args);
+            }(jQuery));
+                        (function ($) {
+                var _ListenLoopTrackingPixelWidget_args = {"apiUrl":"//llapi.apiservicesblocks.com"};
+                var _ListenLoopTrackingPixelWidget = new ListenLoopTrackingPixelWidget(_ListenLoopTrackingPixelWidget_args);
+            }(jQuery));
+                        (function ($) {
+                var _AudioStockDetailsView_args = {"playerId":"preview-player","stockItemId":93160,"rating":{"delegateSelector":".rating","delegateFilter":"span","submitUrl":"/stock-audio/submitrating/93160/"},"DATA_RATING_VALUE":"rating","POST_RATING_VALUE":"rating","messagePlaceholderId":"message-placeholder","isLoggedIn":false};
+                var _AudioStockDetailsView = new AudioStockDetailsView(_AudioStockDetailsView_args);
+            }(jQuery));
+                        (function ($) {
+                var _SiteTopHeaderWidgetView_args = {"cookieName":null,"showNow":true};
+                var _SiteTopHeaderWidgetView = new SiteTopHeaderWidgetView(_SiteTopHeaderWidgetView_args);
+            }(jQuery));
+                        (function ($) {
+                var _FormWidgetView_args = {"formId":"login-form","useAjax":false,"overlayEnabled":true,"SUBMIT_START_EVENT":"submit-start","SUBMIT_AJAX_SUCCESS_EVENT":"submit-success","SUBMIT_AJAX_ERROR_EVENT":"submit-error","MESSAGE_AREA_CLASS":"form-message"};
+                var _FormWidgetView = new FormWidgetView(_FormWidgetView_args);
+            }(jQuery));
+                        (function ($) {
+                var _AudioPlayerWidgetView_args = {"playerId":"preview-player","playerControlsId":"preview-player-controls","playerTitleSelector":"#preview-player-controls .jp-title","playerFooterAncestorFilter":".player-footer","isPlaylistMode":false,"audioFiles":[{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/step-it-up_f1tDgLSu.mp3","title":"Step it Up"}],"playOnLoad":true,"swfPath":"https://dtyn3c8zjrx01.cloudfront.net/extra/assets/audioblocks/extras/Jplayer.swf"};
+                var _AudioPlayerWidgetView = new AudioPlayerWidgetView(_AudioPlayerWidgetView_args);
+            }(jQuery));
+                        (function ($) {
+                var _AudioStockItemGroupWidgetView_args = {"wrapperSelector":"#similar-clips","stockItemFilter":".stock-item","buttons":{"addToBinClass":"add-item-to-bin","addToBinJoinClass":"join-now","downloadMp3Class":"download-item-mp3","downloadWavClass":"download-item-wav"},"subtext":{"addToBinClass":"add-to-album-text","downloadMp3Class":"download-mp3-text","downloadWavClass":"download-wav-text"},"audioPlayerArgs":{"playerId":"similar-clips-player","playerControlsId":"similar-clips-player-controls","playerTitleSelector":"#similar-clips-player-controls .jp-title","playerFooterAncestorFilter":".player-footer","isPlaylistMode":true,"audioFiles":[{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/cup-of-life_M1oPVHHO.mp3","title":"Cup Of Life"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/lady-be-mine_fJSRlZrO.mp3","title":"Lady Be Mine"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/not-for-the-last-time_fkvDYbB_.mp3","title":"Not For The Last Time"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/bnm-0715-dingus-solo-alt.mp3","title":"Dingus Solo Alt"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/kids-commercial-upbeat-happy-theme_f1qWjENu.mp3","title":"Kids Commercial Upbeat Happy Theme"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/the-day-i-lost-you_zJwRJXr_.mp3","title":"The Day I Lost You"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/bnm-0715-fly-by-stinger.mp3","title":"Fly By Stinger"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/falling-water_GkS0MerO.mp3","title":"Falling Water"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/morrisons-jig_MkXBw-Bd.mp3","title":"Morrisons Jig"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/interface-rmx-60sd_zJJmmIEu.mp3","title":"Interface Rmx 60sd"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/bright-bright-sunshine-full_zJ6fYNV_.mp3","title":"Bright Bright Sunshine Full"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/jdi-0414-west_coast_ride-looping.mp3","title":"West coast ride looping"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/funky-70s-dance-floor-groove_fkB8cVN_.mp3","title":"Funky 70s Dance Floor Groove"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/bcc-031814-drum-and-bass-groove-396.mp3","title":"Drum And Bass Groove"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/hidden-agenda_f1aF5lrO.mp3","title":"Hidden Agenda"},{"url":"https://d1490khl9dq1ow.cloudfront.net/music/mp3preview/deeply-in-love-alt-mix_Gk3SRJr_.mp3","title":"Deeply In Love - Alt Mix"}],"playOnLoad":false,"swfPath":"https://dtyn3c8zjrx01.cloudfront.net/extra/assets/audioblocks/extras/Jplayer.swf"},"isLoggedIn":false,"playAllSelector":null,"stopPlayAllSelector":null,"DATA_INDEX":"index"};
+                var _AudioStockItemGroupWidgetView = new AudioStockItemGroupWidgetView(_AudioStockItemGroupWidgetView_args);
+            }(jQuery));
+                        (function ($) {
+                var _AnnualJoinPopupWidgetView_args = {"popupId":"join-modal","delegateElement":"body","delegateFilter":".download-item, .rating, #add-to-bin-wrapper, .report-clip-error-open","centerOnOpen":false,"appendToBody":true,"OPENING_EVENT":"opening","SHOW_ON_LOAD":false};
+                var _AnnualJoinPopupWidgetView = new AnnualJoinPopupWidgetView(_AnnualJoinPopupWidgetView_args);
+            }(jQuery));
+                        (function ($) {
+                var _FormWidgetView_args = {"formId":"join","useAjax":false,"overlayEnabled":true,"SUBMIT_START_EVENT":"submit-start","SUBMIT_AJAX_SUCCESS_EVENT":"submit-success","SUBMIT_AJAX_ERROR_EVENT":"submit-error","MESSAGE_AREA_CLASS":"form-message"};
+                var _FormWidgetView = new FormWidgetView(_FormWidgetView_args);
+            }(jQuery));
+            
+        }); // End of on document ready function call
+    </script>
+
+
+<!--[if lt IE 9]>
+<script src="/assets/common/independent/html5shiv.js"></script>
+<script src="/assets/common/independent/respond.min.js"></script>
+<![endif]-->
+
+
+        <script>
+            (function() {
+                var _fbq = window._fbq || (window._fbq = []);
+                if (!_fbq.loaded) {
+                    var fbds = document.createElement('script');
+                    fbds.async = true;
+                    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(fbds, s);
+                    _fbq.loaded = true;
+                }
+                _fbq.push(['addPixelId', '278707952301546']);
+            })();
+            window._fbq = window._fbq || [];
+            window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=278707952301546&amp;ev=NoScript" /></noscript>
+<script src="//www.conversionblocks.com/admin/js/listenloop_helper.js"></script>
+<script type="text/javascript">
+window.fkVisitorData = window.fkVisitorData || function() {
+    try {
+        return JSON.parse(atob("eyJjdXN0b21fcHJvcGVydGllcyI6eyJzaXRlX2lkIjoiMSIsInVzZXJfaWRlbnRpZmllciI6ImU0YmUxNjA1NjhiMGU5YjI3Y2VmYmE2MDUwZTljMDBhNTcxYmE0NmEwNTBhYTk1ZGEwYWNlMGUzYTNjYzAyM2YifX0="));
+    } catch (e) {
+        console.log("Could not parse data");
+    }
+}
+</script>
+ <div id="outdated"> <h6>Please upgrade your browser to use AudioBlocks.</h6> <p>AudioBlocks works best with the latest technology. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Please upgrade your browser to ensure the best experience.</a> </p> <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p> </div> <script> function addLoadEvent(func) { var oldonload = window.onload; if (typeof window.onload != 'function') { window.onload = func; } else { window.onload = function() { if (oldonload) { oldonload(); } func(); } } } addLoadEvent(function(){ outdatedBrowser({ lowerThan: 'transform', languagePath: '' }) }); </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"856189673f","applicationID":"3824816","transactionName":"Ml1SNhdZCEoDWxULWQsXcxcWTAlUTUsVDVUOFVEXAVEJFhlNEw5\/AUVsTA1MC1U=","queueTime":0,"applicationTime":71,"atts":"HhpRQF9DG0Q=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script></body>
+</html>
